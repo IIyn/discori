@@ -4,10 +4,9 @@
   "version": "0.1.0",
   "identifier": "com.ilyn.discori",
   "build": {
-    "beforeDevCommand": "bun run dev",
-    "devUrl": "http://localhost:1420",
-    "beforeBuildCommand": "bun run build",
-    "frontendDist": "../dist"
+    "beforeDevCommand": "",
+    "beforeBuildCommand": "",
+    "frontendDist": "../"
   },
   "app": {
     "trayIcon": {

@@ -1,79 +1,38 @@
 {
-  "package": {
-    "productName": "Discord Tauri",
-    "version": "0.3.0"
-  },
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "discori",
+  "version": "0.1.0",
+  "identifier": "com.ilyn.discori",
   "build": {
-    "distDir": "../dist",
-    "devPath": "../dist",
-    "beforeDevCommand": "",
-    "beforeBuildCommand": "",
-    "withGlobalTauri": true
+    "beforeDevCommand": "bun run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "bun run build",
+    "frontendDist": "../dist"
   },
-  "tauri": {
-    "systemTray": {
-      "iconPath": "icons/icon.png"
-    },
-    "bundle": {
-      "active": true,
-      "targets": "all",
-      "identifier": "discord.tauri",
-      "icon": [
-        "icons/32x32.png",
-        "icons/128x128.png",
-        "icons/128x128@2x.png",
-        "icons/icon.icns",
-        "icons/icon.ico"
-      ],
-      "resources": [],
-      "externalBin": [],
-      "copyright": "",
-      "category": "Social Networking",
-      "shortDescription": "",
-      "longDescription": "",
-      "deb": {
-        "depends": []
-      },
-      "macOS": {
-        "frameworks": [],
-        "minimumSystemVersion": "",
-        "exceptionDomain": "",
-        "signingIdentity": null,
-        "entitlements": null
-      },
-      "windows": {
-        "certificateThumbprint": null,
-        "digestAlgorithm": "sha256",
-        "timestampUrl": ""
-      }
-    },
-    "updater": {
-      "active": false
-    },
-    "allowlist": {
-      "all": false,
-      "notification": {
-        "all": true
-      }
+  "app": {
+    "trayIcon": {
+      "iconPath": "icons/tray.ico"
     },
     "windows": [
       {
-        "title": "Discord Tauri",
-        "width": 1200,
-        "height": 650,
-        "resizable": true,
-        "minWidth": 940,
-        "minHeight": 500,
-        "fullscreen": false,
-        "visible": false,
-        "url": "index.html",
-        "label": "main",
-        "decorations": true,
-        "center": true
+        "title": "discori",
+        "width": 800,
+        "height": 600
       }
     ],
     "security": {
-      "csp": "default-src blob: data: filesystem: ws: wss: http: https: tauri: 'unsafe-eval' 'unsafe-inline' 'self' img-src: 'self'"
+      "csp": null
     }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
   }
 }

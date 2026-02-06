@@ -17,7 +17,6 @@ pub fn run() {
         .setup(|app| {
             let quit = MenuItem::with_id(app, "quit", "Quit", true, Option::<&str>::None)?;
             let show = MenuItem::with_id(app, "show", "Show", true, Option::<&str>::None)?;
-
             let menu = Menu::with_items(app, &[&show, &quit])?;
 
             TrayIconBuilder::new()
